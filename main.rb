@@ -28,7 +28,9 @@ end
 helpers do
   def process_pull_request(pull_request)
     @client.create_status(pull_request['base']['repo']['full_name'], pull_request['head']['sha'], 'pending')
+    
     sleep 2 # do busy work...
+    
     @client.create_status(pull_request['base']['repo']['full_name'], pull_request['head']['sha'], 'success')
     puts "Pull request processed!"
   end
