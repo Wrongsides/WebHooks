@@ -1,1 +1,1 @@
-echo "Hello World! of Pull Requests"
+echo "Hello World! of Pull Requests, with statuses!"
